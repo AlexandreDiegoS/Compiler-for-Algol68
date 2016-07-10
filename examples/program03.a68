@@ -1,0 +1,65 @@
+#			ALGOL 68
+		Programa Teste 3
+	
+	Alexandre D S Silva
+ 	Barbara M B de Carvalho
+ 	Thais M de Almeida
+#
+
+# Inicio do programa #
+BEGIN
+    INT operacao;
+	operacao := 2;
+     
+  	PROC add = (INT a, b) INT:
+  	BEGIN
+       RETURN a+b;
+  	END
+  	
+  	PROC sub = (INT c, d) INT:
+  	BEGIN
+       RETURN c-d;
+  	END
+  	
+  	PROC mult = (INT e, f) INT:
+  	BEGIN
+       RETURN e*f;
+  	END
+  	
+  	PROC div = (INT g, h) INT:
+  	BEGIN
+  		IF h = 0 THEN
+  			RETURN 0;
+  		ELSE
+       		RETURN g / h;
+       	FI
+  	END
+
+  	PROC main = () VOID:
+  	BEGIN
+  		INT x;
+  		INT y;		# Comentar para testar regra 3 e  #
+  		# BOOL y; # # Descomentar para testar regra 3 #
+  		x := 10;
+  		y := 25;
+  		IF operacao = 0 THEN
+  			PRINT(add(x,y));
+  		ELSE
+  			IF operacao = 1 THEN
+  				PRINT(sub(x,y));
+  			ELSE
+				IF operacao = 2 THEN
+					PRINT(mult(x,y));
+				ELSE
+					IF operacao = 3 THEN
+		  				PRINT(div(x,y));
+		  			ELSE
+		  				PRINT(0000);
+		  			FI		
+				FI
+  			FI
+  		FI  
+  	END
+  	
+  	main();
+END

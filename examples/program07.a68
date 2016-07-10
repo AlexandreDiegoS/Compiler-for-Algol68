@@ -1,0 +1,59 @@
+#			ALGOL 68
+		Programa Teste 7
+	
+	Alexandre D S Silva
+ 	Barbara M B de Carvalho
+ 	Thais M de Almeida
+#
+
+# Inicio do programa #
+BEGIN
+	# Comentar as linhas 13-22 e descomentar as linhas 24-33 para testar regra 7.1 #
+	# Regra 7.2 verificada pelo retorno das linhas 19-22 (Vide regra 5) #
+	PROC greater = (INT a, INT b) BOOL : BEGIN RETURN a > b; END
+	PROC greaterEqual = (INT a, INT b) BOOL : BEGIN RETURN a >= b; END
+	PROC less = (INT a, INT b) BOOL : BEGIN RETURN a < b; END
+	PROC lessOrEqual = (INT a, INT b) BOOL : BEGIN RETURN a <= b; END
+	PROC equal = (INT a, INT b) BOOL : BEGIN RETURN a = b; END
+	PROC diff = (INT a, INT b) BOOL : BEGIN RETURN a /= b; END
+	PROC mul = (INT a, INT b) INT : BEGIN RETURN a * b; END
+	PROC div = (INT a, INT b) INT : BEGIN RETURN a / b; END
+	PROC add = (INT a, INT b) INT : BEGIN RETURN a + b; END
+	PROC sub = (INT a, INT b) INT : BEGIN RETURN a - b; END
+	
+#	PROC greater = (INT a, BOOL b) BOOL : BEGIN RETURN a > b; END
+	PROC greaterEqual = (INT a, BOOL b) BOOL : BEGIN RETURN a >= b; END
+	PROC less = (INT a, BOOL b) BOOL : BEGIN RETURN a < b; END
+	PROC lessOrEqual = (INT a, BOOL b) BOOL : BEGIN RETURN a <= b; END
+	PROC equal = (INT a, BOOL b) BOOL : BEGIN RETURN a = b; END
+	PROC diff = (INT a, BOOL b) BOOL : BEGIN RETURN a /= b; END
+	PROC mul = (INT a, BOOL b) INT : BEGIN RETURN a * b; END
+	PROC div = (INT a, BOOL b) INT : BEGIN RETURN a / b; END
+	PROC add = (INT a, BOOL b) INT : BEGIN RETURN a + b; END
+	PROC sub = (INT a, BOOL b) INT : BEGIN RETURN a - b; END	#
+	
+	# Comentar linha 36 e descomentar linha 37 para teste da regra 7.5 
+	     e comentar linhas 40-43 para testar regra 7.4 #
+	INT x, y;
+	# BOOL x, y; #
+	# Regra 7.6 pode ser verificada pelos retornos dos valores abaixo, 
+		uma vez que o retorno deve ser do mesmo tipo da funcao (Vide regra 5) #
+	BOOL l, le, g, ge, e, ne;
+	l  := less(x,y);
+	le := lessOrEqual(x,y);
+	g  := greater(x,y);
+	ge := greaterEqual(x,y);
+	e  := equal(x,y);
+	ne := diff(x,y);
+	
+	PRINT(greater(x,y));
+	PRINT(greaterEqual(x,y));
+	PRINT(less(x,y));
+	PRINT(lessOrEqual(x,y));
+	
+	# Descomentar linhas abaixo para teste da regra 7.2 #
+#	PRINT( TRUE + FALSE );
+	PRINT( TRUE - FALSE );
+	PRINT( TRUE * FALSE );
+	PRINT( TRUE / FALSE ); #
+END

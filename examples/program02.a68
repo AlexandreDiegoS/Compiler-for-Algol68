@@ -1,0 +1,24 @@
+#			ALGOL 68
+		Programa Teste 2
+	
+	Alexandre D S Silva
+ 	Barbara M B de Carvalho
+ 	Thais M de Almeida
+#
+
+# Inicio do programa #
+BEGIN
+    INT a;
+    # INT b; #  # Descomentar para testar regra 2 #
+	a := 16;
+	
+  		# Imprime na tela o valor da posicao 15 da seq. fibonacci #
+  	PROC main = () INT:
+  	BEGIN
+  		INT b;
+  		b := a / 4;
+  		RETURN b; 
+  	END
+  	
+  	PRINT(main());
+END

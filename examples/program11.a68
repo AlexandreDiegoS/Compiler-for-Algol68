@@ -1,0 +1,34 @@
+#			ALGOL 68
+		Programa Teste 11
+	
+	Alexandre D S Silva
+ 	Barbara M B de Carvalho
+ 	Thais M de Almeida
+#
+
+# Inicio do programa #
+BEGIN
+    INT a, b, c;
+	
+	PROC ehCrescente = (INT x, y, z) BOOL:
+	BEGIN
+		BOOL crescente;
+		crescente := FALSE;
+		
+		IF x < y THEN
+			IF y < z THEN
+				crescente := TRUE;
+			FI
+		FI
+		RETURN crescente;
+	END
+	 
+  	PROC main = () BOOL:
+  	BEGIN
+  		a := 2;
+  		b := 4;
+  		c := 6;
+  		RETURN ehCrescente(a,b,c); 
+  	END
+  	# RETURN TRUE; # # Descomentar para teste da regra 11 # 
+END

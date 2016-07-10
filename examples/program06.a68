@@ -1,0 +1,31 @@
+#			ALGOL 68
+		Programa Teste 6
+	
+	Alexandre D S Silva
+ 	Barbara M B de Carvalho
+ 	Thais M de Almeida
+#
+
+# Inicio do programa #
+BEGIN
+	BOOL teste;
+	INT cont;
+	teste := FALSE;
+	cont := 1;
+	# Comentar linhas 16-17 e 29 para teste da regra 6 # 
+	WHILE cont <= 30
+	DO
+		cont := cont + 1;
+		IF cont = 10 THEN
+			teste := TRUE;
+			BREAK;
+		ELSE
+			cont := (cont - 1) * 2;
+			IF cont = 8 THEN
+				CONTINUE;
+			FI
+		FI
+		cont := cont + 1;
+	OD
+	PRINT(teste);
+END

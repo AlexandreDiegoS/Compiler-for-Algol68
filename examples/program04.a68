@@ -1,0 +1,42 @@
+#			ALGOL 68
+		Programa Teste 4
+	
+	Alexandre D S Silva
+ 	Barbara M B de Carvalho
+ 	Thais M de Almeida
+#
+
+# Inicio do programa #
+BEGIN
+	PROC fatorialN = (INT fator, n) INT:
+  	BEGIN
+  		INT retorno;
+       	IF n > 1 THEN
+       		retorno := fatorialN(fator*n, n-1);
+       	ELSE
+       		retorno := fator;
+		FI
+		RETURN retorno;	# Comentar para testar regra 4 #
+  	END
+  	
+  	PROC fatorial = (INT fat) INT:
+  	BEGIN
+       	IF fat > 1 THEN
+       		RETURN fatorialN(1, fat);
+       	ELSE
+       		IF fat = 0 THEN
+       			RETURN 0;
+       		ELSE
+       			RETURN fat;
+       		FI
+		FI
+  	END
+  	
+  	PROC main = (INT x) VOID:
+  	BEGIN
+  		PRINT(fatorial(x)); 
+  	END
+  	INT valor;
+  	valor := 8;
+  	main(valor);
+END

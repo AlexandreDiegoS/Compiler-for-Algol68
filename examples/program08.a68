@@ -1,0 +1,23 @@
+#			ALGOL 68
+		Programa Teste 8
+	
+	Alexandre D S Silva
+ 	Barbara M B de Carvalho
+ 	Thais M de Almeida
+#
+
+# Inicio do programa #
+BEGIN
+    
+    PROC isBigger = (INT a, INT b) BOOL:
+    BEGIN
+    	BOOL ret;
+    	IF a > b THEN
+    		# ret := a; # # Descomentar para teste da regra 8 # 
+    		RETURN TRUE;
+    	FI
+    	RETURN FALSE;
+    END
+    # isBigger := 8; # # Descomentar para teste da regra 8 # 
+    PRINT(isBigger(5, 7));
+END

@@ -1,0 +1,31 @@
+#			ALGOL 68
+		Programa Teste 12
+	
+	Alexandre D S Silva
+ 	Barbara M B de Carvalho
+ 	Thais M de Almeida
+#
+
+# Inicio do programa #
+BEGIN
+	
+	PROC mul = (INT a, INT b) INT : BEGIN RETURN a * b; END
+	PROC div = (INT a, INT b) INT : BEGIN RETURN a / b; END
+  	
+  	INT x,t;
+  	BOOL resposta;
+  	
+  	PROC main = () VOID:
+  	BEGIN
+	  	x := 4;
+		IF TRUE THEN
+			WHILE (t < x)
+			DO 
+				x := div(x,t); 
+			OD
+		ELSE 
+			x := mul(x,t);
+		FI
+		resposta := TRUE;
+  	END
+END

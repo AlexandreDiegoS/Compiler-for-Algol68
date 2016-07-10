@@ -1,0 +1,42 @@
+#			ALGOL 68
+		Programa Teste 14
+	
+	Alexandre D S Silva
+ 	Barbara M B de Carvalho
+ 	Thais M de Almeida
+#
+
+# Inicio do programa #
+BEGIN
+
+	PROC mod = (INT x, y) INT:
+  	BEGIN
+  		INT result;
+  		result := x;
+  		WHILE result > y
+		DO
+			result := result - y;
+		OD
+  		RETURN result;
+  	END
+    
+    INT a;
+    INT b;
+    a := 500;
+    b := 50;
+    
+    WHILE a > b
+    DO
+    	IF mod(a,b) /= 0 THEN
+    		b := b + mod(a,b);
+    		a := a - 5;
+    		CONTINUE;
+    	FI
+    	a := a + b - 20;
+    	IF a >= 10000 THEN
+    		BREAK;
+    	FI
+    OD
+    PRINT(a);
+    PRINT(b);
+END

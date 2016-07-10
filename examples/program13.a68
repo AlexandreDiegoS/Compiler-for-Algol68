@@ -1,0 +1,25 @@
+#			ALGOL 68
+		Programa Teste 13
+	
+	Alexandre D S Silva
+ 	Barbara M B de Carvalho
+ 	Thais M de Almeida
+#
+
+# Inicio do programa #
+BEGIN
+    PROC equal = (INT a, INT b) BOOL : BEGIN RETURN a = b; END
+	PROC diff = (INT a, INT b) BOOL : BEGIN RETURN a /= b; END
+	
+	INT x, y, t;
+	x := 2;
+	y := 5;
+	t := 10; 
+	IF diff(x, y) THEN
+		IF equal(x, t/y) THEN
+			PRINT(y);
+		ELSE
+			PRINT(t);
+		FI
+	FI
+END

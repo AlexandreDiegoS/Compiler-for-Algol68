@@ -1,0 +1,24 @@
+#			ALGOL 68
+		Programa Teste 1
+	
+	Alexandre D S Silva
+ 	Barbara M B de Carvalho
+ 	Thais M de Almeida
+#
+
+# Inicio do programa #
+BEGIN
+    INT a, b;
+    INT c; # Comentar para testar regra 1 #
+	a := 0;
+	b := 1;
+    
+    PROC main = () INT:
+  	BEGIN
+  		c := a-b;
+  		PRINT(a+b);
+  		RETURN c;
+  	END
+	
+	PRINT(main());
+END

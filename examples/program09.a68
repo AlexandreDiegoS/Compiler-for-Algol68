@@ -1,0 +1,28 @@
+#			ALGOL 68
+		Programa Teste 9
+	
+	Alexandre D S Silva
+ 	Barbara M B de Carvalho
+ 	Thais M de Almeida
+#
+
+# Inicio do programa #
+BEGIN
+	# A regra 9 nao surte efeito sobre a linguagem uma vez que todo o 
+		ponto de entrada do codigo eh o seu inicio, sendo todo o corpo o "main" # 
+  	PROC pot = (INT base, exp) INT:
+  	BEGIN
+		INT result;
+		INT cont;
+		cont := 0;
+		result := 1;
+		WHILE cont < exp
+		DO
+			result := result* base;
+			cont := cont + 1;
+		OD
+		RETURN result;
+  	END
+  	
+  	PRINT(pot(2, 10));
+END

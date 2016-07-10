@@ -1,0 +1,21 @@
+#			ALGOL 68
+		Programa Teste 15
+			
+	Alexandre D S Silva
+ 	Barbara M B de Carvalho
+ 	Thais M de Almeida
+#
+
+# Inicio do programa #
+BEGIN
+    INT a, b;
+	a := 0;
+	b := 10;
+    
+    IF a > b THEN
+    	PRINT(a);
+    	a := 0;
+    ELSE
+    	a := a + 1;
+    FI
+END

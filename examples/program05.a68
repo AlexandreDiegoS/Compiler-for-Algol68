@@ -1,0 +1,49 @@
+#			ALGOL 68
+		Programa Teste 5
+			
+	Alexandre D S Silva
+ 	Barbara M B de Carvalho
+ 	Thais M de Almeida
+#
+
+# Inicio do programa #
+BEGIN
+    INT a, b;
+	a := 0;
+	b := 1;
+     
+  	PROC fib = (INT pos) INT:
+  	BEGIN
+       IF pos = 0 THEN 
+       		RETURN a;
+       ELSE 
+       		IF pos = 1 THEN
+       			RETURN b;
+       		ELSE
+       			INT anterior, atual, posA;
+       			posA := 1;
+       			anterior := a;
+		       	atual := b;
+				WHILE posA /= pos
+		    	DO 	
+		    		INT aux;							
+	       			posA := posA + 1;
+		    		aux := anterior;
+	       			anterior := atual;
+	       			atual := aux + anterior;
+	            OD
+	            # Comentar linha 36 e descomentar linha 37 para teste da regra 5 #
+	            RETURN atual;
+	            # RETURN posA /= pos; #
+			FI
+		FI
+  	END
+  	
+  		# Imprime na tela o valor da posicao 15 da seq. fibonacci#
+  	PROC main = () VOID:
+  	BEGIN
+  		PRINT(fib(15)); 
+  	END
+  	
+  	main();
+END

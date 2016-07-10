@@ -1,0 +1,31 @@
+#			ALGOL 68
+		Programa Teste 15
+	
+	Alexandre D S Silva
+ 	Barbara M B de Carvalho
+ 	Thais M de Almeida
+#
+
+# Inicio do programa #
+BEGIN
+	INT a, b;
+	b := 5;
+	a := b;
+	
+	PROC f = (INT c, d, BOOL e) VOID :
+	BEGIN
+		WHILE e DO
+			IF 7 > d THEN
+				IF c > b THEN
+					e := FALSE;
+				FI
+			ELSE
+				IF c > b THEN
+					d := a+1;
+					c := d * 6 / 7;
+				FI
+			FI
+		OD
+		PRINT(f(6,7,TRUE));
+	END
+END
